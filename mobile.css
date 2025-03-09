@@ -1,4 +1,4 @@
-@media (max-width: 1024px) {
+@media (max-width: 1300px) {
     .header {
         padding: 0 3%;
     }
@@ -12,6 +12,148 @@
         display: none;
     }
 }
+@media  (max-width: 1024px) {
+    /* Regras para telas de até 1024px */
+    .header {
+        padding: 0 2%;
+    }
+
+    .produto {
+        flex-wrap: wrap;
+        padding: 2rem;
+        text-align: center;
+    }
+
+    .produto .image img {
+        display: none;
+        max-width: 100%;
+        height: auto;
+    }
+
+    .ingredientes .box-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .preco{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(6rem, 1fr));
+        gap: 11rem;
+    }
+
+    .preco .preco.flexozil{
+        text-align: center;
+        padding: 1rem;
+        background: linear-gradient(130deg, #111 93%, transparent 90%);
+        margin: 0;
+        gap: 1rem;
+    }
+    .preco .preco.flexozil h3{
+        font-size: 1.5rem;
+        margin: 1rem 0;
+        color: #fff;
+    }
+
+    .preco .preco.flexozil .price{
+        font-size: 2rem;
+        font-weight: bolder;
+        color: rgb(227,140,41);
+    }
+    .preco .preco.flexozil .list{
+        padding: 1rem 0;
+    }
+    .preco .preco.flexozil .list p {
+        line-height: 2;
+        padding: 1rem 0;
+        font-size: 2rem;
+        color: #aaa;
+    }
+    .preco .preco.flexozil .list span {
+        line-height: 2;
+        font-size: 3rem;
+        color: rgb(227, 140, 41);
+    }
+}
+
+@media (min-width: 800px) and (max-width: 900px) {
+    /* Regras para telas de até 900px */
+    html {
+        font-size: 60%;
+    }
+
+    .produto {
+        flex-direction: column;
+        text-align: center;
+        display: flex;
+        flex-direction: row;
+        margin-top: 15rem;
+        justify-content: center;
+        flex-wrap: wrap;
+        padding: 2rem;
+        text-align: center;
+    }
+
+    .header .navbar {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        gap: 5rem;
+    }
+
+    .header .navbar a {
+        font-size: 1.8rem;
+        padding: 1rem 0;
+    }
+
+    .preco .preco.flexozil {
+        width: 14rem;
+    }
+
+    .ingredientes .box-container {
+        grid-template-columns: 1fr;
+    }
+
+    .depoimento .box-container {
+        grid-template-columns: 1fr;
+    }
+    .preco{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(6rem, 1fr));
+        gap: 11rem;
+    }
+
+    .preco .preco.flexozil{
+        text-align: center;
+        padding: 2rem;
+        background: linear-gradient(130deg, #111 93%, transparent 90%);
+        margin: 1;
+        gap: 1rem;
+    }
+    .preco .preco.flexozil h3{
+        font-size: 1.5rem;
+        margin: 1rem 0;
+        color: #fff;
+    }
+
+    .preco .preco.flexozil .price{
+        font-size: 2rem;
+        font-weight: bolder;
+        color: rgb(227,140,41);
+    }
+    .preco .preco.flexozil .list{
+        padding: 1rem 0;
+    }
+    .preco .preco.flexozil .list p {
+        line-height: 2;
+        padding: 1rem 0;
+        font-size: 2rem;
+        color: #aaa;
+    }
+    .preco .preco.flexozil .list span {
+        line-height: 2;
+        font-size: 3rem;
+        color: rgb(227, 140, 41);
+    }
+}
+
 
 @media (max-width: 768px) {
     html {
@@ -102,7 +244,7 @@
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 410px) {
     html {
         font-size: 50%;
     }
