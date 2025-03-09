@@ -1,0 +1,135 @@
+@media (max-width: 1024px) {
+    .header {
+        padding: 0 3%;
+    }
+
+    .produto {
+        flex-wrap: wrap;
+        padding: 3rem;
+    }
+
+    .produto .image img {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    html {
+        font-size: 55%;
+    }
+    body{
+        overflow-x: hidden;
+    }
+    #menu-btn {
+        display: inline-block;
+    }
+
+    #menu-btn.fa-times {
+        transform: rotate(180deg);
+    }
+    .header .navbar {
+        position: absolute;
+        display: block;
+        top: 99%;
+        left: 0;
+        right: 0;
+        background: #000;
+        clip-path: polygon(0 0,100% 0,100% 0, 0 0);
+    }
+    .header .navbar.active{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%)
+    }
+    .header .navbar a {
+        display: block;
+        font-size: 2rem;
+    }
+
+    .produto {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .produto .image,
+    .produto .content {
+        flex: 1 1 100%;
+    }
+
+    .ingredientes .box-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .depoimento .box-container {
+        grid-template-columns: 1fr;
+    }
+    .preco{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(6rem, 1fr));
+        gap: 11rem;
+    }
+
+    .preco .preco.flexozil{
+        text-align: center;
+        padding: 2rem;
+        background: linear-gradient(130deg, #111 93%, transparent 90%);
+        margin: 0;
+        width: 16rem;
+        gap: 1rem;
+    }
+    .preco .preco.flexozil h3{
+        font-size: 1.5rem;
+        margin: 1rem 0;
+        color: #fff;
+    }
+
+    .preco .preco.flexozil .price{
+        font-size: 2rem;
+        font-weight: bolder;
+        color: rgb(227,140,41);
+    }
+    .preco .preco.flexozil .list{
+        padding: 1rem 0;
+    }
+    .preco .preco.flexozil .list p {
+        line-height: 2;
+        padding: 1rem 0;
+        font-size: 2rem;
+        color: #aaa;
+    }
+    .preco .preco.flexozil .list span {
+        line-height: 2;
+        font-size: 3rem;
+        color: rgb(227, 140, 41);
+    }
+}
+
+@media (max-width: 480px) {
+    html {
+        font-size: 50%;
+    }
+    #menu-btn {
+        display: inline-block;
+    }
+
+    .header {
+        display: flex;
+        flex-direction: row;
+        text-align: center;
+    }
+
+    .produto {
+        padding: 2rem;
+        margin-top: 16rem;
+    }
+
+    .ingredientes .box-container {
+        grid-template-columns: 1fr;
+    }
+
+    .depoimento .box-container {
+        grid-template-columns: 1fr;
+    }
+
+    .footer {
+        text-align: center;
+    }
+}

@@ -1,0 +1,556 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+    overflow-x: hidden;
+}
+
+html::-webkit-scrollbar {
+    width: 1rem;
+}
+
+/*o que fica abaixo da barra*/
+html::-webkit-scrollbar-track {
+        background: #000;
+}
+
+  /*cor da barra*/
+html::-webkit-scrollbar-thumb {
+    background: rgb(227, 140, 41);
+}
+
+section {
+    padding: 5rem 9%;
+}
+
+/* Estrutura do navbar header */
+.btn {
+    margin-top: 0.5rem;
+    display: inline-block;
+    /* padding:  2rem; */
+    padding-right: 1rem;
+    background: linear-gradient(130deg, rgb(227, 140, 41) 93%, 
+    transparent 90%);
+    color: #fff;
+    cursor: pointer;
+    font-size: 1.9rem;
+    align-items: center;
+}
+.btn:hover {
+    transform: scale(1.1);
+    background: linear-gradient(130deg, rgb(194, 40, 10) 93%, 
+    transparent 90%)
+    
+}
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1%;
+    z-index: 10000;
+    background: #000;
+}
+.header .logo {
+    font-weight: bolder;
+    color: #fff;
+    font-size: 3rem;
+}
+
+.header .logo img{
+    width: 10rem;
+}
+.header .logo span {
+    color: rgb(227, 140, 41);
+}
+.header .navbar a {
+    display: inline-block;
+    padding: 1.5rem 2rem;
+    font-size: 1.7rem;
+    color: #fff;
+}
+.header .navbar a:hover {
+    background: rgb(227, 140, 41);
+}
+
+
+/* btn menu hamburgue */
+#menu-btn{
+    font-size: 3rem;
+    color: #fff;
+    cursor: pointer;
+    display: none;
+}
+
+/* Texto do cabeçallhos */
+
+.heading {
+    text-align: center;
+    margin-bottom: 3rem;
+    position: relative;
+}
+.heading::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    height: .1rem;
+    width: 100%;
+    background: #fff;
+    z-index: -1;
+}
+.heading span {
+    font-size: 3rem;
+    color: rgb(227, 140, 41);
+    padding: .5rem 1.5rem;
+    border-radius: .5rem;
+}
+
+/* Seção sobre o produto */
+
+.produto{
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 4em;
+    padding: 5rem;
+    padding-bottom: 2rem;
+    background-color: rgb(227, 140, 41);
+    margin-top: 13rem;
+
+}
+
+.produto .image{
+    flex: 1 1 42rem;
+    position: relative;
+    border-radius: 1rem;
+}
+
+.produto .image::before
+.produto .image::after{
+    content: '';
+    position: absolute;
+    z-index: -1;
+    background: rgb(227, 140, 41);
+    height: 16rem;
+    width: 17rem;
+}
+
+.produto .image::before{
+    top: 0;
+    left: 0;
+}
+
+.produto .image img{
+    width: 50rem;
+    border-radius: 2rem;
+}
+
+.produto .content{
+    flex: 1 1 42rem;
+}
+
+.produto .content span{
+    font-size: 6rem;
+    color: #000;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+}
+
+.produto .content .title{
+    font-size: 1.8rem;
+    color: #000;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.produto .content p{
+    font-size: 1.4rem;
+    color: #fff;
+    padding: 1rem 0 ;
+    line-height: 2;
+}
+
+.produto .content .box-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-top: 1rem;
+}
+
+.produto .content .box-container .box{
+    flex: 1 1 20rem;
+}
+
+.produto .content .box-container .box h3{
+    font-size: 1.5rem;
+    color: #000;
+    margin-bottom: 2rem;
+}
+
+/* Seção de estilização de beneficio */
+
+.beneficio .box-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 2rem; 
+    max-width: 1200px;
+    margin: auto;
+}
+
+.beneficio .box-container .box{
+    background: #000;
+    color: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+    
+
+}
+
+.beneficio .box-container .box.second{
+    display: flex;
+    flex-flow: column-reverse;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.beneficio .box-container .box:hover .image img{
+    transform: scale(1.1);
+}
+
+.beneficio .box-container .box .image{
+    height: 17rem;
+    width: 100%;
+    overflow: hidden;
+}
+
+.beneficio .box-container .box .image img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 4rem;
+}
+
+.beneficio .box-container .box .content{
+    padding: 2rem;
+    text-align: center;
+}
+
+.beneficio .box-container .box .content img {
+    height: 4rem;
+    margin-bottom: 1rem;
+
+}
+
+.beneficio .box-container .box .content h3{
+    font-size: 2rem;
+    color: rgb(227, 140, 41);
+}
+
+.beneficio .box-container .box .content h4{
+    color: #fff;
+    font-size: 1.2rem;
+}
+
+.beneficio .box-container .box .content p{
+    color: #fff;
+    font-size: 1.3rem;
+}
+
+.beneficio .box-container .box .content i{
+    color: rgb(227, 140, 41);
+}
+
+
+/* Area de customização dos ingrediente */
+
+.ingredientes .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
+    gap: 1.5rem;
+}
+
+.ingredientes .box-container .box{
+    background: rgb(227, 140, 41);
+}
+
+.ingredientes .box-container .box.second{
+    display: flex;
+    flex-flow: column-reverse;
+}
+
+.ingredientes .box-container .box:hover .image img{
+    transform: scale(1.1);
+}
+
+.ingredientes .box-container .box .image{
+    height: 10rem;
+    width: 100%;
+    overflow: hidden;
+}
+
+.ingredientes .box-container .box .image img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.ingredientes .box-container .box .content{
+    padding: 2rem;
+    text-align: center;
+}
+
+.ingredientes .box-container .box .content img {
+    height: 7rem;
+    margin-bottom: 1rem;
+    filter: invert(1);
+
+}
+
+.ingredientes .box-container .box .content h3{
+    font-size: 2rem;
+    color: rgb(5, 23, 3);
+}
+
+.ingredientes .box-container .box .content p{
+    font-size: 1.3rem;
+    color: #fff;
+}
+
+/* Seção da garantia banner */
+
+.garantia{
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+    url(img/show.png) no-repeat;;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    text-align: center;
+}
+
+.garantia span{
+    font-size: 2rem;
+    color: #fff;
+}
+
+.garantia h3{
+    padding-top: 1rem;
+    color: rgb(227, 140, 41);
+    text-transform: uppercase;
+    font-size: 3.5rem;
+}
+
+.garantia p{
+    margin: 1rem auto;
+    max-width: 60rem;
+    font-size: 1.5rem;
+    color: #fff;
+    line-height: 2;
+}
+
+
+
+/* Seção dos preço do produto */
+
+.preco{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
+}
+
+.preco .informacao{
+    background: #000;
+}
+
+.preco .informacao span{
+    font-size: 2rem;
+    color: rgb(227, 140, 41);
+}
+
+.preco .informacao h3{
+    font-size: 4rem;
+    padding-top: .5rem;
+    color: #fff;
+}
+
+.preco .informacao p{
+    line-height: 2;
+    padding: 1rem 0;
+    font-size: 1.4rem;
+    color: #aaa;
+}
+
+.preco .preco.flexozil{
+    text-align: center;
+    padding: 2rem;
+    background: linear-gradient(130deg, #111 93%, transparent 90%);
+    margin: 5rem;
+}
+
+.preco .preco.flexozil h3{
+    font-size: 2.5rem;
+    margin: 1rem 0;
+    color: #fff;
+}
+
+.preco .preco.flexozil .price{
+    font-size: 3rem;
+    font-weight: bolder;
+    color: rgb(227, 140, 41);
+}
+
+.preco .preco.flexozil .price span{
+    color: #fff;
+    font-size: 2rem;
+}
+
+.preco .preco.flexozil .list{
+    padding: 1rem 0;
+}
+
+.preco .preco.flexozil .list p{
+    line-height: 2;
+    padding: 1rem 0;
+    font-size: 2rem;
+    color: #aaa;
+}
+
+.preco .preco.flexozil .list span{
+    line-height: 2;
+    font-size: 3rem;
+    color: rgb(227, 140, 41);
+}
+
+/* comentarios */
+
+.depoimento .box-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 2rem; 
+    max-width: 1200px;
+    margin: auto;
+}
+
+.depoimento .box-container .box{
+    background: #000;
+    color: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+    
+
+}
+
+.depoimento .box-container .box.second{
+    display: flex;
+    flex-flow: column-reverse;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.depoimento .box-container .box:hover .image img{
+    transform: scale(1.1);
+}
+
+.depoimento .box-container .box .image{
+    height: 17rem;
+    width: 100%;
+    overflow: hidden;
+}
+
+.depoimento .box-container .box .image img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 4rem;
+}
+
+.depoimento .box-container .box .content{
+    padding: 2rem;
+    text-align: center;
+}
+
+.depoimento .box-container .box .content img {
+    height: 4rem;
+    margin-bottom: 1rem;
+
+}
+
+.depoimento .box-container .box .content h3{
+    font-size: 2rem;
+    color: rgb(227, 140, 41);
+}
+
+.depoimento .box-container .box .content h4{
+    color: #fff;
+    font-size: 1.2rem;
+}
+
+.depoimento .box-container .box .content p{
+    color: #fff;
+    font-size: 1.3rem;
+}
+
+.depoimento .box-container .box .content i{
+    color: rgb(227, 140, 41);
+}
+
+/* FOOTER */
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1%;
+    z-index: 10000;
+    background: #000;
+}
+
+.footer .logo span {
+    color: rgb(227, 140, 41);
+}
+.footer .navbar a {
+    display: inline-block;
+    padding: 1.5rem 2rem;
+    font-size: 1rem;
+    color: #fff;
+}
+.footer .navbar a:hover {
+    background: rgb(227, 140, 41);
+}
+
+.footer .container .content .box-container .box{
+    color: #fff;
+    font-weight: 200;
+    margin: 1rem;
+}
